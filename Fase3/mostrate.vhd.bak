@@ -1,0 +1,15 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity mostrate is
+	port( money0 : in std_logic_vector (6 downto 0);
+			money1 : in std_logic_vector (6 downto 0);
+			money2 : in std_logic_vector (6 downto 0);
+			money3 : in std_logic_vector (6 downto 0);
+			money4 : in std_logic_vector (6 downto 0);
+			money5 : in std_logic_vector (6 downto 0);
+			sel	 : in std_logic_vector(2 downto 0);
+			moneyO : out std_logic_vector(6 downto 0));
+end mostrate;
+
+

@@ -1,0 +1,23 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity Panda is
+	port(clk     : in std_logic;
+		  tro : in std_logic_vector(9 downto 0);
+		  reset : in std_logic;
+		  sai : out std_logic_vector(3 downto 0));
+		  --EnBin   : out std_logic);
+end Panda;
+
+architecture fixe of Panda is
+signal s_sai : integer;
+begin
+process(clk)
+begin
+if(rising_edge(clk)) then
+	s_sai <= to_integer(unsigned(tro) / "101");
+	end if;
+end process;
+sai <= std_logic_vector(to_unsigned(s_sai, 4));
+end fixe;
